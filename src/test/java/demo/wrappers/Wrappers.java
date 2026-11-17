@@ -14,4 +14,22 @@ public class Wrappers {
     /*
      * Write your selenium wrappers here
      */
+    public static void clickElement(WebDriver driver, By locator) {
+        driver.findElement(locator).click();
+    }
+
+    public static void enterText(WebDriver driver, By locator, String text){
+        driver.findElement(locator).sendKeys(text);
+    }
+
+    public static String getText(WebDriver driver, By locator){
+
+        return driver.findElement(locator).getText();
+
+    }
+
+    public static void pressEnter(WebDriver driver, By locator){
+        driver.findElement(locator).sendKeys(Keys.ENTER);
+    }
 }
+
